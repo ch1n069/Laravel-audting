@@ -17,7 +17,7 @@ class Author extends Model implements AuditableContract
     protected $fillable = [
         'name',
     ];
-
+    ///define the relationship to the book one to many relationships
      public function books()
     {
         return $this->hasMany(Book::class);

@@ -157,14 +157,7 @@ return [
     ],
 
 
-    'models' => [
-        'App\Models\Author' => [
-            'table' => 'author_audited',
-        ],
-        'App\Models\Book' => [
-            'table' => 'book_audits',
-        ],
-    ],
+   
 
     /*
     |--------------------------------------------------------------------------

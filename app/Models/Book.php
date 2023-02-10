@@ -13,13 +13,12 @@ class Book extends Model implements AuditableContract
     use HasFactory;
     use Auditable;
 
-    public function getAuditTable()
-    {
-        return 'book_audits';
-    }
+  
     protected $fillable = [
         'title','author_id'
     ];
+    // this define the relationship with the between the book to the author and
+    //one to one relationship 
     public function author()
     {
         return $this->belongsTo(Author::class);
