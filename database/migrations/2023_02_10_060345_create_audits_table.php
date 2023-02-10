@@ -14,7 +14,7 @@ class CreateAuditsTable extends Migration
      */
     public function up()
     {
-        Schema::connection(config('audit.drivers.database.connection', config('database.default')))->create('audits', function (Blueprint $table) {
+        Schema::connection(config('audit.drivers.database.connection', config('database.default')))->create('novel_audits_table', function (Blueprint $table) {
         
             $morphPrefix = Config::get('audit.user.morph_prefix', 'user');
             
@@ -42,6 +42,6 @@ class CreateAuditsTable extends Migration
      */
     public function down()
     {
-        Schema::connection(config('audit.drivers.database.connection', config('database.default')))->drop('audits');
+        Schema::connection(config('audit.drivers.database.connection', config('database.default')))->drop('novel_audits_table');
     }
 }
